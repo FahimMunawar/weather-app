@@ -43,7 +43,7 @@ weather-app/
 
 2. Run the container:
     ```bash
-    docker run --env-file .env -p 5000:5000 weather-app
+    docker run --env-file .local-env -p 5000:5000 weather-app
 
 ### 🐳 Run with Docker Compose (Recommended)
 
