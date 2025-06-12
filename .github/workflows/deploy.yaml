@@ -46,7 +46,7 @@ jobs:
     - name: Run container and verify API version
       run: |
         docker run -d --rm \
-          -e API_VERSION=${{ env.RELEASE_VERSION }} \
+          -e RELEASE_VERSION=${{ env.RELEASE_VERSION }} \
           -e WEATHER_API_KEY=${{ secrets.WEATHER_API_KEY }} \
           -p 5000:5000 --name test-container ${{ secrets.DOCKERHUB_USERNAME }}/weather-app:${{ env.RELEASE_VERSION }}
 

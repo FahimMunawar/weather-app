@@ -16,7 +16,7 @@ app = Flask(__name__)
 # Configuration
 WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
 WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather'
-API_VERSION = os.getenv('RELEASE_VERSION', '0.0.1')
+API_VERSION = os.getenv('RELEASE_VERSION')
 REQUEST_TIMEOUT = 5
 
 def format_datetime():
