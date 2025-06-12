@@ -4,7 +4,9 @@ import socket
 from datetime import datetime
 import os
 import logging
+from dotenv import load_dotenv
 
+load_dotenv()
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -12,9 +14,9 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # Configuration
-WEATHER_API_KEY = os.getenv('WEATHER_API_KEY', 'b9517897479087f0e91cb028293dace6')
+WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
 WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather'
-API_VERSION = '1.0.0'
+API_VERSION = os.getenv('RELEASE_VERSION', '0.0.1')
 REQUEST_TIMEOUT = 5
 
 def format_datetime():
