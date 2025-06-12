@@ -40,8 +40,8 @@ jobs:
       run: |
         docker build \
           --build-arg API_VERSION=${{ env.RELEASE_VERSION }} \
-          -t ${{ secrets.DOCKER_USERNAME }}/weather-app:${{ env.RELEASE_VERSION }} .
-        docker push ${{ secrets.DOCKER_USERNAME }}/weather-app:${{ env.RELEASE_VERSION }}
+          -t ${{ secrets.DOCKERHUB_USERNAME }}/weather-app:${{ env.RELEASE_VERSION }} .
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/weather-app:${{ env.RELEASE_VERSION }}
 
     - name: Run container and verify API version
       run: |
