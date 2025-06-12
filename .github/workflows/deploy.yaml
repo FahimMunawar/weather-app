@@ -25,7 +25,7 @@ jobs:
     - name: Debug - Test manual login
       run: |
         echo "Testing manual Docker login..."
-        echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+        echo $DOCKERHUB_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
         echo "✅ Manual login successful!"
         docker logout
       env:
