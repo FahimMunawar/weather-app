@@ -46,6 +46,11 @@ spec:
                 secretKeyRef:
                   name: {{ .Release.Name }}-secrets
                   key: WEATHER_API_KEY
+            - name: RELEASE_VERSION
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: RELEASE_VERSION
 
           ports:
             - name: http
