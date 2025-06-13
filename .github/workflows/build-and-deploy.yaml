@@ -109,7 +109,7 @@ jobs:
 
     - name: Create Secret For Application Env Vars
       run: |
-        kubectl -n ${{ env.NAMESPACE }} create secret generic ${{env.CONTAINER_NAME}}-secret \
+        kubectl -n ${{ env.NAMESPACE }} create secret generic ${{env.CONTAINER_NAME}}-secrets \
           --from-literal=WEATHER_API_KEY=${{ secrets.WEATHER_API_KEY }} \
           --from-literal=RELEASE_VERSION=${{ env.VERSION }} \
           --dry-run=client -o yaml | kubectl apply -f -
