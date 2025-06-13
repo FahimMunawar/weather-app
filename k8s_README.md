@@ -61,6 +61,15 @@ The following secrets are managed within the CI/CD pipeline:
 
 🌐 **Access the deployed application**: [http://4.234.49.98/api/hello](http://4.234.49.98/api/hello)
 
+As you can see from the screenshot that the V1.0.14 has been released to main.
+
+![alt text](image.png)
+
+The response also gives us the same version
+
+![alt text](image-1.png)
+
+
 The endpoint returns the current release version, demonstrating successful deployment and version tracking.
 
 ## Technologies Used
