@@ -103,7 +103,7 @@ jobs:
       with:
         namespace: ${{ env.NAMESPACE }}
         secret-name: dockerhub-secret
-        container-registry-url: https://docker.io/
+        container-registry-url: https://index.docker.io/v1/
         container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
         container-registry-password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
