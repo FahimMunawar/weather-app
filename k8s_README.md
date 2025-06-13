@@ -69,6 +69,9 @@ The response also gives us the same version
 
 ![alt text](image-1.png)
 
+The response from the health check url: http://4.234.49.98/api/health
+
+![alt text](image-2.png)
 
 The endpoint returns the current release version, demonstrating successful deployment and version tracking.
 
@@ -80,6 +83,8 @@ The endpoint returns the current release version, demonstrating successful deplo
 - **Load Balancing**: NGINX Ingress Controller
 - **CI/CD**: GitHub Actions
 - **Secret Management**: Kubernetes Secrets
+
+
 
 ## Deployment Flow
 
@@ -93,3 +98,56 @@ The endpoint returns the current release version, demonstrating successful deplo
 8. **Rollout Verification** → Deployment status monitoring and validation
 
 This implementation showcases enterprise-grade DevOps practices with automated testing, security-first secret management, and reliable deployment strategies.
+
+# 📊 Monitoring & Observability
+
+To ensure high availability and performance of the weather service deployed in AKS, a complete observability stack is in place. This includes logging, metrics, and tracing to help monitor system health and debug production issues efficiently.
+
+---
+
+## 🔍 Logs – Loki + Azure Log Analytics
+
+- **Loki** is used to collect logs from all AKS pods, which are queryable through **Grafana**.
+- Logs provide insights into:
+  - API access and response codes
+  - Weather API errors
+  - Internal application exceptions
+- **Azure Log Analytics** complements cluster-wide diagnostics like:
+  - Node and pod health
+  - Kube events and resource usage
+
+---
+
+## 📈 Metrics – Prometheus + Grafana
+
+- **Prometheus** scrapes metrics from the service, Kubernetes nodes, and system components.
+- Metrics include:
+  - Request rate and error rate
+  - Container CPU and memory usage
+  - Uptime and API latency
+- **Grafana** visualizes these metrics with real-time dashboards and supports alerts.
+
+---
+
+## 📡 Tracing – OpenTelemetry (Pluggable)
+
+- **OpenTelemetry** is integrated for distributed tracing.
+- It enables visibility into:
+  - API request paths
+  - External API call latency (e.g., OpenWeatherMap)
+  - End-to-end request flow across services
+- Future-ready for export to **Jaeger** or **Azure Application Insights**.
+
+---
+
+## 🧠 Summary
+
+| Category | Tool(s)                    | Purpose                                 |
+|----------|----------------------------|-----------------------------------------|
+| Logs     | Loki, Azure Log Analytics  | Centralized logging & diagnostics       |
+| Metrics  | Prometheus, Grafana        | Monitoring and alerting                 |
+| Tracing  | OpenTelemetry              | Distributed request tracing             |
+
+---
+
+This setup ensures complete observability of the weather service — making the system easier to maintain, debug, and scale in production.

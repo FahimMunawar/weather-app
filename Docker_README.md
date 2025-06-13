@@ -53,5 +53,11 @@ Build and start the app:
 docker compose --env-file .local-env up --build
 ```
 
+The response from the /api/hello
 
+![alt text](image-1.png)
+
+The response from the health check url: http://4.234.49.98/api/health
+
+![alt text](image-2.png)
 
