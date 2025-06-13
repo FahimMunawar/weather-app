@@ -111,7 +111,7 @@ jobs:
       run: |
         kubectl -n ${{ env.NAMESPACE }} create secret generic ${{env.CONTAINER_NAME}}-secrets \
           --from-literal=WEATHER_API_KEY=${{ secrets.WEATHER_API_KEY }} \
-          --from-literal=RELEASE_VERSION=${{ env.VERSION }} \
+          --from-literal=RELEASE_VERSION=${{ env.RELEASE_VERSION }} \
           --dry-run=client -o yaml | kubectl apply -f -
 
     - name: Install Helm
