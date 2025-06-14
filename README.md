@@ -2,6 +2,10 @@
 
 A simple Python-based weather application that fetches and displays current weather data using a public API.
 
+> ⚠️ **Note:** The CI/CD pipelines for this project were originally configured and tested within my personal GitHub account where required GitHub Secrets are set. Since I do not have permissions to configure secrets in the provided repository, the pipeline may not run as expected here. For demonstration purposes, the workflow files are still included in `.github/workflows/`.
+
+> For **local development**, a `.local-env` file is used to inject environment variables such as the weather API key. This file is intentionally left the API KEY to run the project locally.
+
 ## 📁 Project Structure
 ```
 weather-app/
