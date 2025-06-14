@@ -6,7 +6,7 @@ This repository contains Terraform configuration files for provisioning the pre-
 
 - [Terraform](https://www.terraform.io/downloads.html) (v1.x+ recommended)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) for authentication (`az login`)
-- Access to the Sure Pre-Prod Azure subscription
+- Access to the the right Azure subscription
 - Proper configuration of variables in `test.tfvars`
 
 ## Getting Started
@@ -26,9 +26,8 @@ Ensure you are authenticated with your Azure account:
 ```bash
 az login
 ```
-**Make sure you are in the _Sure-Prod-005_ Subscription**
+**Make sure you are in the right subscription**
 
-* Sure-Prod-005 is the current subscription for test Environment.
 
 This will open a browser window for you to complete the login process. Once logged in, you will have access to the appropriate Azure subscription.
 
@@ -73,7 +72,7 @@ The primary configuration file for defining the infrastructure resources.
 ### vars/: 
 Contains the variable definition files for different environments.
 
-sure-pre-prod/pre-prod.tfvars: Variable file specific to the pre-production environment.
+test/test.tfvars: Variable file specific to the pre-production environment.
 ##  Best Practices
 * Always run terraform plan before applying changes to review the infrastructure modifications.
 * Maintain backups of your variable files (.tfvars) to ensure consistency across environments.
