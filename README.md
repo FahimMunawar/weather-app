@@ -227,8 +227,8 @@ As you can see from the commands the service and deployment for the application 
 ![alt text](Images/k8s-deployment.png)
 
 There are 2 Secrets configured through kubernetes secrets. 
-WEATHER_API_KEY
-RELEASE_VERSION
+- WEATHER_API_KEY
+- RELEASE_VERSION
 
 ![alt text](Images/secret.png)
 
