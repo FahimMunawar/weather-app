@@ -98,7 +98,7 @@ This repository contains Terraform configuration files for provisioning the envi
 
 - [Terraform](https://www.terraform.io/downloads.html) (v1.x+ recommended)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) for authentication (`az login`)
-- Access to the Sure Pre-Prod Azure subscription
+- Access to the right Azure subscription
 - Proper configuration of variables in `test.tfvars`
 
 ## Getting Started
