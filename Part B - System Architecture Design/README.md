@@ -1,4 +1,5 @@
-# Scalable E-commerce Cloud Architecture
+# PART - B: Scalable E-commerce Cloud Architecture
+![alt text](System_Architecture.png)
 
 ## System Flow
 
