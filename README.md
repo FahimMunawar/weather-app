@@ -1,24 +1,50 @@
-# 🌦️ Weather App
+# 🌦️ Weather App - Part - A
 
 A simple Python-based weather application that fetches and displays current weather data using a public API.
 
 ## 📁 Project Structure
 
-weather-app/
-
+├── .github/
+│   └── workflows/
+│       └── build-and-deploy.yaml     # CI/CD pipeline for building and deploying the app
+│   └── variables/
+│       └── test.env                  # Environment variable file for testing
+├── Part B - System Architecture Design/
+│   ├── README.md                     # System architecture documentation
+│   └── System_Architecture.png       # Visual diagram of the system design
 ├── apps/
-
-│ └── app.py
-
-├── requirements.txt
-
-├── Dockerfile
-
-├── docker-compose.yaml
-
-├── .env
-
-└── README.md
+│   └── app.py                        # Flask or backend application source code
+├── terraform/
+│   ├── .terraform.lock.hcl           # Terraform dependency lock file
+│   ├── main.tf                       # Root Terraform configuration
+│   ├── variables.tf                  # Input variables
+│   ├── envs/
+│   │   └── test/
+│   ├── vars/
+│   │   └── test/
+│   │       └── test.tfvars           # Variable values for test environment
+│   └── modules/
+│       ├── aks/
+│       │   ├── main.tf
+│       │   ├── outputs.tf
+│       │   └── variables.tf
+│       └── virtual_network/
+│           ├── main.tf
+│           ├── outputs.tf
+│           └── variables.tf
+├── weather-app-svc/                  # K8s Manifest Files
+│   ├── .gitignore
+│   ├── .local-env                    # Local environment variables
+│   ├── Dockerfile                    # Dockerfile for the weather app
+│   ├── docker-compose.yaml           # For local multi-container development
+image
+│   ├── image.png                     # Sample UI screenshot or architecture 
+│   ├── image-1.png
+│   ├── image-2.png
+│   ├── requirements.txt              # Python dependencies
+│   └── README.md                     # Weather service specific documentation
+├── .gitignore
+└── README.md                         # This file
 
 
 ## 🚀 Features
@@ -199,15 +225,15 @@ The following secrets are managed within the CI/CD pipeline:
 
 As you can see from the screenshot that the V1.0.14 has been released to main.
 
-![alt text](image.png)
+![alt text](Images/image.png)
 
 The response also gives us the same version
 
-![alt text](image-1.png)
+![alt text](Images/image-1.png)
 
 The response from the health check url: http://4.234.49.98/api/health
 
-![alt text](image-2.png)
+![alt text](Images/image-2.png)
 
 The endpoint returns the current release version, demonstrating successful deployment and version tracking.
 
