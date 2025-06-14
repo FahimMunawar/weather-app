@@ -328,7 +328,7 @@ To ensure high availability and performance of the weather service deployed in A
 This setup ensures complete observability of the weather service — making the system easier to maintain, debug, and scale in production.
 
 # PART - B: Scalable E-commerce Cloud Architecture
-![alt text](System_Architecture.png)
+![alt text](Part B - System Architecture Design/System_Architecture.png)
 
 ## System Flow
 
