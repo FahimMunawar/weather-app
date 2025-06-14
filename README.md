@@ -222,6 +222,16 @@ The following secrets are managed within the CI/CD pipeline:
 - **Image Repository**: Docker Hub registry for container images
 - **Load Balancing**: NGINX Ingress for external traffic management
 
+As you can see from the commands the service and deployment for the application is done and the pod is running currently.
+
+![alt text](Images/k8s-deployment.png)
+
+There are 2 Secrets configured through kubernetes secrets. 
+WEATHER_API_KEY
+RELEASE_VERSION
+
+![alt text](Images/secret.png)
+
 ## Live Application
 
 🌐 **Access the deployed application**: [http://4.234.49.98/api/hello](http://4.234.49.98/api/hello)
